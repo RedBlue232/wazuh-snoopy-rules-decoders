@@ -6,8 +6,9 @@ Hello, here are some decoders (at least 7) and one rule that can be used with th
 
 1. Copy the decoders and rules to your Wazuh Manager
 
-Copy 0751-snoopy_decoders.xml to /var/ossec/etc/decoders/
-Copy 0751-snoopy_rules.xml to /var/ossec/etc/rules/
+Copy `0751-snoopy_decoders.xml` to `/var/ossec/etc/decoders/`
+
+Copy `0751-snoopy_rules.xml` to `/var/ossec/etc/rules/`
 
 2. Restart Wazuh Manager
 `systemctl restart wazuh-manager`
