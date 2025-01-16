@@ -1,0 +1,14 @@
+<!--
+  Snoopy Rule(s)
+  Author: RedBlue232
+  Feel free to use/edit this file
+  Based on the release 2.5.2 of Snoopy Command Logger, focus only on snoopy logs, no current process for CRON/Sudo logs.
+-->
+
+<group name="snoopy">
+  <rule id="100001" level="5">
+    <decoded_as>snoopy</decoded_as>
+    <description>Commande exécutée détectée par Snoopy : $(snoopy.cmd)</description>
+    <group>snoopy_logs</group>
+  </rule>
+</group>
