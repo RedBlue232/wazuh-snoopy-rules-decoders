@@ -13,5 +13,5 @@ Copy `0751-snoopy_rules.xml` to `/var/ossec/etc/rules/`
 2. Restart Wazuh Manager
 `systemctl restart wazuh-manager`
 
-3. Check if the service has no failure
+3. Check for service failure
 `systemctl status wazuh-manager`
