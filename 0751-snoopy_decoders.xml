@@ -1,0 +1,46 @@
+<!--
+  Snoopy Decoders
+  Author: RedBlue232
+  Feel free to use/edit this file
+  Based on the release 2.5.2 of Snoopy Command Logger, focus only on snoopy logs, no current process for CRON/Sudo logs.
+-->
+
+<decoder name="snoopy">
+  <program_name>^snoopy</program_name>
+</decoder>
+
+<decoder name="snoopyfield">
+  <parent>snoopy</parent>
+  <regex>uid:(\S+)</regex>
+  <order>snoopy.uid</order>
+</decoder>
+
+<decoder name="snoopyfield">
+  <parent>snoopy</parent>
+  <regex>sid:(\d+)</regex>
+  <order>snoopy.sid</order>
+</decoder>
+
+<decoder name="snoopyfield">
+  <parent>snoopy</parent>
+  <regex type="pcre2">tty:\(?([^)\s]+)\)?</regex>
+  <order>snoopy.tty</order>
+</decoder>
+
+<decoder name="snoopyfield">
+  <parent>snoopy</parent>
+  <regex>cwd:(\S+)</regex>
+  <order>snoopy.cwd</order>
+</decoder>
+
+<decoder name="snoopyfield">
+  <parent>snoopy</parent>
+  <regex type="pcre2">filename:([^]]+)\]</regex>
+  <order>snoopy.filename</order>
+</decoder>
+
+<decoder name="snoopyfield">
+  <parent>snoopy</parent>
+  <regex type="pcre2">\]:\s(.*)$</regex>
+  <order>snoopy.cmd</order>
+</decoder>
