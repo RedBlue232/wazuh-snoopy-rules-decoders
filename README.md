@@ -1,0 +1,1 @@
+# wazuh-snoopy-rules-decoders
